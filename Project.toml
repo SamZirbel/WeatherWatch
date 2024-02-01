@@ -1,0 +1,14 @@
+name = "WeatherWatch"
+uuid = "911bc520-39d4-439a-8090-6b3637b689fb"
+authors = ["X "]
+version = "0.1.0"
+
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
+GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+Inflector = "6d011eab-0732-4556-8808-e463c76bf3b6"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
