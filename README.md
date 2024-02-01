@@ -10,11 +10,14 @@ To run this project :
 After downloading you will need to move into the project directory,
 make sure the /bin/repl file has execute permission
 
-run ./bin/repl - this should get everything set up on your julia repl
+run ./bin/repl <== == this should get everything set up on your julia repl
 
 to start the site you will need to use : 
+
 using Genie
+
 up()
 
-and to bring it down use
+and to bring it down use :
+
 down()
