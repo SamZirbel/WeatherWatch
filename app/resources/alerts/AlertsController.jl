@@ -16,11 +16,16 @@ using JSON
     two()
     h1(two())
     [
+      h1() do
+        "Welcome To The Weather Watch Alerts Page"
+      end
+      h1() do
+        "========================================"
+      end
 #      two()
       getAlertNumber(1)
-      h1() do
-        "Gingerbread Rock Greendale"
-      end
+      getAlertNumber(2)
+      getAlertNumber(3)
       h1() do
         "====="
       end
@@ -64,11 +69,44 @@ using JSON
           end
         end
       end
-      h1() do
-        alertProperties["category"]
+      if haskey(alertProperties, "description")
+        h2() do
+          if alertProperties["description"] == nothing
+            "Description Was Not Listed"
+          else
+            string("Alert Description : ", alertProperties["description"])
+          end
+        end
       end
-      a(href=String(alertProperties["@id"])) do
-        "Raw Data For Headline : ",alertProperties["@id"]
+      if haskey(alertProperties, "severity")
+        h3() do
+          if alertProperties["severity"] == nothing
+            "Severity Was Not Listed"
+          else
+             string("Alert Severity : ", alertProperties["severity"])
+          end
+        end
+      end
+      if haskey(alertProperties, "category")
+        h3() do
+          if alertProperties["category"] == nothing
+            "Category Was Not Listed"
+          else
+            string("Alert Category : ", alertProperties["category"])
+          end
+        end
+      end
+      if haskey(alertProperties, "@id")
+        a(href=String(alertProperties["@id"])) do
+          if alertProperties["@id"] == nothing
+            "No Raw Data Link Was Provided For This Weather Alert"
+          else
+            string("Raw Data For Headline : ", alertProperties["@id"])
+          end
+        end
+      end
+      h2() do
+        "--------------------------------------------"
       end
     ]
   end
